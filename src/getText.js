@@ -13,4 +13,10 @@ for (let i = 0; i < pages.length; i++) {
         }
     }
 } 
-console.log(decodeURIComponent(string));
+
+fs.writeFile("../test_output/test.txt",decodeURIComponent(string), err => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+})
